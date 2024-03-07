@@ -3,7 +3,16 @@
     <div class="container">
         <div class="upper-footer">
             <div class="footer-list">
+                @foreach($links as $link)
                 <div class="col">
+                    <h3>{{$link['title']}}</h3>
+                    <ul>
+                        <!--il testo della <li> va tra la mustache syntax ma mi da errore dicendo che 'text' non è una chiave dell'array-->
+                        <li><a href="#"></a>$link['links']['text']</li>
+                    </ul>
+                </div>
+                @endforeach
+                <!-- <div class="col">
                     <h3>DC Comics</h3>
                     <ul>
                         <li><a href="#">Characters</a></li>
@@ -48,7 +57,7 @@
                         <li><a href="#">DC Universe</a></li>
                         <li><a href="#">DC Power Visa</a></li>
                     </ul>
-                </div>
+                </div> -->
 
                 <div class="logo-bg">
                     <img src="{{asset('images/dc-logo-bg.png')}}" alt="Logo">
