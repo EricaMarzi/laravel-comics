@@ -15,50 +15,61 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/characters', function () {
     $title = 'Characters';
-    return view('characters', compact('title'));
+    $links = config('footer.links');
+    return view('characters', compact('title', 'links'));
 })->name('char');
 
 Route::get('/', function () {
     $title = 'Comics';
-    return view('comics', compact('title'));
+    // $links = config('footerlinks');
+    $links = config('footer.links');
+    return view('comics', compact('title', 'links'));
 })->name('comics');
 
 Route::get('/movie', function () {
     $title = 'Movie';
-    return view('movie', compact('title'));
+    $links = config('footer.links');
+    return view('movie', compact('title', 'links'));
 })->name('movie');
 
 Route::get('/tv', function () {
     $title = 'TV';
-    return view('TV', compact('title'));
+    $links = config('footer.links');
+    return view('TV', compact('title', 'links'));
 })->name('TV');
 
 Route::get('/games', function () {
     $title = 'Games';
-    return view('games', compact('title'));
+    $links = config('footer.links');
+    return view('games', compact('title', 'links'));
 })->name('games');
 
 Route::get('/collectibles', function () {
     $title = 'Collectible';
-    return view('collectibles', compact('title'));
+    $links = config('footer.links');
+    return view('collectibles', compact('title', 'links'));
 })->name('collectibles');
 
 Route::get('/videos', function () {
     $title = 'Videos';
-    return view('videos', compact('title'));
+    $links = config('footer.links');
+    return view('videos', compact('title', 'links'));
 })->name('videos');
 
 Route::get('/fans', function () {
     $title = 'Fans';
-    return view('fans', compact('title'));
+    $links = config('footer.links');
+    return view('fans', compact('title', 'links'));
 })->name('fans');
 
 Route::get('/news', function () {
     $title = 'News';
-    return view('news', compact('title'));
+    $links = config('footer.links');
+    return view('news', compact('title', 'links'));
 })->name('news');
 
 Route::get('/shop', function () {
     $title = 'Shop';
-    return view('shop', compact('title'));
+    $links = config('footer.links');
+    return view('shop', compact('title', 'links'));
 })->name('shop');
