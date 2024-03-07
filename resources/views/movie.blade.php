@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DC | {{$title}}</title>
-    <link rel="icon" href="./src/assets/dc-comics-1/img/dc-logo.png">
+    <title>{{env('APP_NAME', 'DC' )}} | {{$title}}</title>
+    <link rel="icon" href="{{asset('images/dc-logo.png')}}">
 </head>
 
 <body>
