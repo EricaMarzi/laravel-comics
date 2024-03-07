@@ -3,11 +3,13 @@ header {
     background-color: white;
 }
 
-.container {
+.container-header {
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .logo img {

@@ -1,5 +1,5 @@
 <header>
-    <div class="container">
+    <div class="container-header">
         <div class="logo">
             <img src="{{asset('images/dc-logo.png')}}" alt="logo">
         </div>

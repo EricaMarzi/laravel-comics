@@ -14,13 +14,11 @@
     <!--Header-->
     @include('includes.header')
     <main>
-
+        @yield('main-content')
     </main>
-    <footer>
+    <div class="bonus"></div> <!--Stai qui così ti vedo-->
 
-    </footer>
-
-
+    @include('includes.footer')
 </body>
 
 </html>
