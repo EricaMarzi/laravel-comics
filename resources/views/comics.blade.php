@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{env('APP_NAME', 'DC' )}} | {{$title}}</title>
     <link rel="icon" href="{{asset('images/dc-logo.png')}}">
+
+    @vite('resources/js/app.js')
 </head>
 
 <body>
     <div class="container">
         <div class="logo">
-            <!-- <img src="../assets/dc-comics-1/img/dc-logo.png" alt=""> --> <!--devi rimettere le immagini-->
+            <img src="{{asset('images/dc-logo.png')}}" alt="logo">
         </div>
 
         <div>
