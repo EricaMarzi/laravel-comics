@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DC | Comics</title>
-    <link rel="icon" href="./src/assets/dc-comics-1/img/dc-logo.png">
+    <title>DC | {{$title}}</title>
+    <link rel="icon" href="./src/assets/dc-comics-1/img/dc-logo.png"> <!--devi rimettere le immagini-->
 </head>
 
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <!-- <img src="../assets/dc-comics-1/img/dc-logo.png" alt=""> -->
+                <!-- <img src="../assets/dc-comics-1/img/dc-logo.png" alt=""> --> <!--devi rimettere le immagini-->
             </div>
 
             <div>
