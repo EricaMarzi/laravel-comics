@@ -5,16 +5,14 @@
         </div>
 
         <ul class="navbar">
-            <li><a href="{{route('char')}}">Characters</a></li>
-            <li><a href="{{route('comics')}}">Comics</a></li>
-            <li><a href="{{route('movie')}}">Movie</a></li>
-            <li><a href="{{route('TV')}}">Tv</a></li>
-            <li><a href="{{route('games')}}">Games</a></li>
-            <li><a href="{{route('collectibles')}}">Collectibles</a></li>
-            <li><a href="{{route('videos')}}">Videos</a></li>
-            <li><a href="{{route('fans')}}">Fans</a></li>
-            <li><a href="{{route('news')}}">News</a></li>
-            <li><a href="{{route('shop')}}">Shop</a></li>
+            @foreach($navLinks as $link)
+            <li>
+                <a href="{{route($link)}}" class="{{Route::is($link) ? 'active' : '' }}">{{$link}}</a>
+            </li>
+            @endforeach
         </ul>
     </div>
+    <section class="jumbotron">
+        <div class="jumbotron-bg"></div>
+    </section>
 </header>
