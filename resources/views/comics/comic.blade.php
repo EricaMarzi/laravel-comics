@@ -55,7 +55,7 @@
             <h2>Specs</h2>
             <div class="info">
                 <h5>Series:</h5>
-                <p><span>{{$comics['series']}}</span></p>
+                <p><span class="series">{{$comics['series']}}</span></p>
             </div>
             <div class="info">
                 <h5>U.S. Price:</h5>
@@ -68,5 +68,4 @@
         </div>
     </div>
 </section>
-@dump($comics)
 @endsection

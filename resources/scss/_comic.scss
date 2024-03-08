@@ -103,10 +103,15 @@ figure {
         h5 {
             color: #144879;
             width: 100px;
+
         }
 
         p {
             width: 400px;
+
+            .series {
+                text-transform: uppercase;
+            }
         }
 
         span {
