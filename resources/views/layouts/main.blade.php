@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{env('APP_NAME', 'DC' )}} | {{$title}}</title>
     <link rel="icon" href="{{asset('images/dc-logo.png')}}">
+    @yield('cdns')
 
     @vite('resources/js/app.js')
 </head>

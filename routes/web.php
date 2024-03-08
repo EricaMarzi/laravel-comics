@@ -31,8 +31,9 @@ Route::get('/comics', function () {
 Route::get('/comic', function () {
     $title = 'Comic';
     $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
+    $comics = config('comics');
     $links = config('footerLinks');
-    return view('comics.comic', compact('title', 'links', 'navLinks'));
+    return view('comics.comic', compact('title', 'links', 'navLinks'), ['comics' => $comics[0]]);
 })->name('comic');
 
 Route::get('/movie', function () {
