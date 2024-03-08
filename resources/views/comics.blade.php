@@ -3,11 +3,13 @@
 <div class="container">
     <div class="row-main">
         <div class="col-main">
-            @foreach($comics as $comic)
-            <div class="card-main">
-                <img class="poster" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+            @foreach($comics as $poster)
+            <div class="card-main"><a href="{{route('comic')}}">
+
+                    <img class="poster" src="{{$poster['thumb']}}" alt="{{$poster['title']}}">
+                </a>
                 <label>
-                    <div class="title">{{$comic['series']}}</div>
+                    <div class="title">{{$poster['series']}}</div>
                 </label>
             </div>
             @endforeach

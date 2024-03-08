@@ -20,13 +20,20 @@ Route::get('/characters', function () {
     return view('characters', compact('title', 'links', 'navLinks'));
 })->name('characters');
 
-Route::get('/', function () {
+Route::get('/comics', function () {
     $title = 'Comics';
     $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
     $comics = config('comics');
     $links = config('footerLinks');
     return view('comics', compact('title', 'comics', 'links', 'navLinks'));
 })->name('comics');
+
+Route::get('/comic', function () {
+    $title = 'Comic';
+    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
+    $links = config('footerLinks');
+    return view('comics.comic', compact('title', 'links', 'navLinks'));
+})->name('comic');
 
 Route::get('/movie', function () {
     $title = 'Movie';
