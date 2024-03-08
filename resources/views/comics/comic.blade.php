@@ -4,6 +4,11 @@
 @endsection
 @section('main-content')
 <section class="comic">
+    <figure>
+        <div class="info-comic book">Comic book</div>
+        <img src="{{$comics['thumb']}}" alt="{{$comics['title']}}">
+        <div class="info-comic gallery">View gallery</div>
+    </figure>
     <div class="container flex">
         <div class="description">
             <h1 class="comic-title">{{$comics['title']}}</h1>
