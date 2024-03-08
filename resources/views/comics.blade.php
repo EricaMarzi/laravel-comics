@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row-main">
         <div class="col-main">
-            @foreach($comics as $poster)
-            <div class="card-main"><a href="{{route('comic')}}">
+            @foreach($comics as $index => $poster)
+            <div class="card-main"><a href="{{url('/comics/$index')}}">
 
                     <img class="poster" src="{{$poster['thumb']}}" alt="{{$poster['title']}}">
                 </a>

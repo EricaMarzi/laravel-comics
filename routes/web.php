@@ -20,6 +20,7 @@ Route::get('/characters', function () {
     return view('characters', compact('title', 'links', 'navLinks'));
 })->name('characters');
 
+// Lista fumetti
 Route::get('/comics', function () {
     $title = 'Comics';
     $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
@@ -28,12 +29,13 @@ Route::get('/comics', function () {
     return view('comics', compact('title', 'comics', 'links', 'navLinks'));
 })->name('comics');
 
-Route::get('/comic', function () {
+// Dettaglio fumetto
+Route::get('/comics/{index}', function ($index) {
     $title = 'Comic';
     $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
     $comics = config('comics');
     $links = config('footerLinks');
-    return view('comics.comic', compact('title', 'links', 'navLinks'), ['comics' => $comics[0]]);
+    return view('comics.comic', compact('title', 'links', 'navLinks'), ['comics' => $comics[$index]]);
 })->name('comic');
 
 Route::get('/movie', function () {
