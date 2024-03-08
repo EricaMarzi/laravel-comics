@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/characters', function () {
     $title = 'Characters';
-    $links = config('footer.links');
+    $links = config('footerLinks');
     return view('characters', compact('title', 'links'));
 })->name('char');
 
