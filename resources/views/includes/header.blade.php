@@ -5,7 +5,7 @@
         </div>
 
         <ul class="navbar">
-            @foreach($navLinks as $link)
+            @foreach(config('header_links') as $link)
             <li>
                 <a href="{{route($link)}}" class="{{Route::is($link) ? 'active' : '' }}">{{$link}}</a>
             </li>

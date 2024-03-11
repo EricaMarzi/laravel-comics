@@ -15,81 +15,80 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/characters', function () {
     $title = 'Characters';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('characters', compact('title', 'links', 'navLinks'));
+
+    return view('characters', compact('title'));
 })->name('characters');
 
 // Lista fumetti
-Route::get('/comics', function () {
+Route::get('/', function () {
     $title = 'Comics';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
+
     $comics = config('comics');
-    $links = config('footerLinks');
-    return view('comics', compact('title', 'comics', 'links', 'navLinks'));
+
+    return view('comics', compact('title', 'comics'));
 })->name('comics');
 
 // Dettaglio fumetto
 Route::get('/comics/{index}', function ($index) {
     $title = 'Comic';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
+
     $comics = config('comics');
-    $links = config('footerLinks');
-    return view('comics.comic', compact('title', 'links', 'navLinks'), ['comics' => $comics[$index]]);
+
+    return view('comics.comic', compact('title'), ['comics' => $comics[$index]]);
 })->name('comic');
 
 Route::get('/movie', function () {
     $title = 'Movie';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('movie', compact('title', 'links', 'navLinks'));
+
+
+    return view('movie', compact('title'));
 })->name('movie');
 
 Route::get('/tv', function () {
     $title = 'TV';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('TV', compact('title', 'links', 'navLinks'));
+
+
+    return view('TV', compact('title'));
 })->name('TV');
 
 Route::get('/games', function () {
     $title = 'Games';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('games', compact('title', 'links', 'navLinks'));
+
+
+    return view('games', compact('title'));
 })->name('games');
 
 Route::get('/collectibles', function () {
     $title = 'Collectible';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('collectibles', compact('title', 'links', 'navLinks'));
+
+
+    return view('collectibles', compact('title'));
 })->name('collectibles');
 
 Route::get('/videos', function () {
     $title = 'Videos';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('videos', compact('title', 'links', 'navLinks'));
+
+
+    return view('videos', compact('title'));
 })->name('videos');
 
 Route::get('/fans', function () {
     $title = 'Fans';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('fans', compact('title', 'links', 'navLinks'));
+
+
+    return view('fans', compact('title'));
 })->name('fans');
 
 Route::get('/news', function () {
     $title = 'News';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('news', compact('title', 'links', 'navLinks'));
+
+
+    return view('news', compact('title'));
 })->name('news');
 
 Route::get('/shop', function () {
     $title = 'Shop';
-    $navLinks = ['characters', 'comics', 'movie', 'TV', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'];
-    $links = config('footerLinks');
-    return view('shop', compact('title', 'links', 'navLinks'));
+
+
+    return view('shop', compact('title'));
 })->name('shop');

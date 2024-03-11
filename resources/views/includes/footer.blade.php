@@ -3,7 +3,7 @@
     <div class="container">
         <div class="upper-footer">
             <div class="footer-list">
-                @foreach($links as $link)
+                @foreach(config('footerLinks') as $link)
                 <div class="col">
                     <h3>{{$link['title']}}</h3>
                     <ul>
